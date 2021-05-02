@@ -5,9 +5,10 @@ const mongoose = require('mongoose');
 const productsRouter = require('./api/router/products');
 
 const app = express();
-
+const Mongo_Atlas_PW = process.env.Mongo_Atlas_PW;
+const Mongo_Atlas_NA = process.env.Mongo_Atlas_NA;
 mongoose.connect(
-    'mongodb+srv://hanoj:Newpass2@@node-rest-shop-7gyns.mongodb.net/test?retryWrites=true', 
+    `mongodb+srv://${Mongo_Atlas_NA}:${Mongo_Atlas_PW}node-rest-shop-7gyns.mongodb.net/test?retryWrites=true`, 
     {
     useNewUrlParser : true,
     useUnifiedTopology : true
